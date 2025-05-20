@@ -17,6 +17,7 @@ class CustomThemeModel extends ThemeExtension<CustomThemeModel> {
   final Color themeColor8;
   final Color themeColor9;
   final Color themeColor10;
+  final Color themeColor11;
 
   const CustomThemeModel({
     required this.themeColor1,
@@ -29,6 +30,7 @@ class CustomThemeModel extends ThemeExtension<CustomThemeModel> {
     required this.themeColor8,
     required this.themeColor9,
     required this.themeColor10,
+    required this.themeColor11,
   });
 
   @override
@@ -43,6 +45,7 @@ class CustomThemeModel extends ThemeExtension<CustomThemeModel> {
     Color? themeColor8,
     Color? themeColor9,
     Color? themeColor10,
+    Color? themeColor11,
   }) {
     return CustomThemeModel(
       themeColor1: themeColor1 ?? this.themeColor1,
@@ -55,6 +58,7 @@ class CustomThemeModel extends ThemeExtension<CustomThemeModel> {
       themeColor8: themeColor8 ?? this.themeColor8,
       themeColor9: themeColor9 ?? this.themeColor9,
       themeColor10: themeColor10 ?? this.themeColor10,
+      themeColor11: themeColor11 ?? this.themeColor11,
     );
   }
 
@@ -74,6 +78,7 @@ class CustomThemeModel extends ThemeExtension<CustomThemeModel> {
       themeColor8: Color.lerp(themeColor8, other.themeColor8, t)!,
       themeColor9: Color.lerp(themeColor9, other.themeColor9, t)!,
       themeColor10: Color.lerp(themeColor10, other.themeColor10, t)!,
+      themeColor11: Color.lerp(themeColor11, other.themeColor11, t)!,
     );
   }
 }

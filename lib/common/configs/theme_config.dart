@@ -11,6 +11,12 @@ class ThemeConfig {
       scaffoldBackgroundColor: themeColors.themeColor1,
       textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
       iconTheme: IconThemeData(color: themeColors.themeColor6),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: themeColors.themeColor3,
+          foregroundColor: themeColors.themeColor1,
+        ),
+      ),
       extensions: [
         CustomThemeModel(
           themeColor1: themeColors.themeColor1,
@@ -23,6 +29,7 @@ class ThemeConfig {
           themeColor8: themeColors.themeColor8,
           themeColor9: themeColors.themeColor9,
           themeColor10: themeColors.themeColor10,
+          themeColor11: themeColors.themeColor11,
         ),
       ],
     );

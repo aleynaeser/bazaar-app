@@ -5,7 +5,8 @@ class Sizes {
   static const double largePadding = 24.0;
 
   // SizedBox
-  static const double sizedBox = 30.0;
+  static const double smallSizedBox = 10.0;
+  static const double mediumSizedBox = 30.0;
 
   // Border Radius
   static const double smallBorderRadius = 4.0;
@@ -25,4 +26,5 @@ class Sizes {
   static const double smallTextSize = 12.0;
   static const double mediumTextSize = 13.0;
   static const double largeTextSize = 14.0;
+  static const double xLargeTextSize = 24.0;
 }
