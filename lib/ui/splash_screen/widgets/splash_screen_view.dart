@@ -52,7 +52,7 @@ class SplashScreenPageView extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Lottie.asset(animation),
+        Lottie.asset(animation, fit: BoxFit.cover),
         const SizedBox(height: 64),
         Text(
           title,

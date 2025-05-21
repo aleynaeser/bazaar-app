@@ -29,7 +29,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
           status: ProductStatus.success,
           response: ProductResponse(
             success: response.success,
-            products: [...state.response.products, ...response.products],
+            products: [...response.products],
           ),
         ),
       );

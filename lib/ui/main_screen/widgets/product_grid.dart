@@ -19,7 +19,7 @@ class ProductGrid extends StatelessWidget {
       case ProductStatus.initial:
         return Center(
           child: CircularProgressIndicator(
-            color: context.themeColors.themeColor2,
+            color: context.themeColors.themeColor8,
             padding: EdgeInsets.all(Sizes.mediumPadding),
           ),
         );

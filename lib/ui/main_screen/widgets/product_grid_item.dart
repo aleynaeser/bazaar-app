@@ -16,6 +16,7 @@ class ProductGridItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(product);
     return Container(
       padding: const EdgeInsets.all(Sizes.smallPadding),
       decoration: BoxDecoration(
