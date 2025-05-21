@@ -6,7 +6,6 @@ class BaseInfo {
   static const String packageName = 'com.example.bazaar_app';
   static const String buildNumber = '1';
 
-  static String apiUrl = dotenv.env['NEWS_API_URL'] ?? '';
-
-  static const String avatarUrl = "https://avatar.iran.liara.run/public";
+  static String apiUrl = dotenv.env['API_URL'] ?? '';
+  static String imageUrl = dotenv.env['IMAGE_URL'] ?? '';
 }

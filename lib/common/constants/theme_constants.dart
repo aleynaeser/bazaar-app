@@ -29,12 +29,12 @@ class ThemeColors {
 
   static const light = ThemeColors._(
     themeColor1: Color(0xFFf7f7f9),
-    themeColor2: Color(0xFFFFFFFF),
+    themeColor2: Color(0xFFEAEAEA),
     themeColor3: Color(0xFFFF8E39),
     themeColor4: Color(0xFF282829),
-    themeColor5: Color(0xFF939598),
+    themeColor5: Color(0xFF181818),
     themeColor6: Color(0xFF636466),
-    themeColor7: Color.fromARGB(13, 0, 0, 0),
+    themeColor7: Color(0xFFC4C4C4),
     themeColor8: Color(0xFFdee0e1),
     themeColor9: Color.fromARGB(33, 0, 0, 0),
     themeColor10: Color(0xFFFF7002),
@@ -43,12 +43,12 @@ class ThemeColors {
 
   static const dark = ThemeColors._(
     themeColor1: Color(0xFF181818),
-    themeColor2: Color(0xFF262626),
+    themeColor2: Color(0xFF1F1F1F),
     themeColor3: Color(0xFFFF8E39),
-    themeColor4: Color(0xFFFFFFFF),
-    themeColor5: Color(0xFFB1B3B6),
+    themeColor4: Color(0xFFF2F1F1),
+    themeColor5: Color(0xFFf7f7f9),
     themeColor6: Color(0xFFBCBCBC),
-    themeColor7: Color.fromARGB(10, 255, 255, 255),
+    themeColor7: Color(0xFF414141),
     themeColor8: Color(0xFF393839),
     themeColor9: Color.fromARGB(3, 255, 255, 255),
     themeColor10: Color(0xFFFF7002),

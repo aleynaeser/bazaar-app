@@ -63,7 +63,7 @@ class SplashScreenBottomSheet extends StatelessWidget {
               ),
               child: Text(
                 "Skip",
-                style: TextStyle(fontSize: Sizes.largeTextSize),
+                style: TextStyle(fontSize: Sizes.largeFontSize),
               ),
             ),
           ],

@@ -35,7 +35,7 @@ class BazaarApp extends StatelessWidget {
           title: BaseInfo.appName,
           debugShowCheckedModeBanner: false,
           theme: ThemeConfig.getTheme(themeProvider.isDarkMode),
-          home: showHome ? const MainScreen() : const SplashScreen(),
+          home: showHome ? const MainScreen() : SplashScreen(),
         );
       },
     );

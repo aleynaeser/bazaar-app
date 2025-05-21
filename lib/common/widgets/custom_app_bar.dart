@@ -1,71 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../constants/size_constants.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import '../providers/theme_provider.dart';
 import 'package:bazaar_app/common/models/theme_model.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-  const CustomAppBar({Key? key, required this.title}) : super(key: key);
+  const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      scrolledUnderElevation: 0,
-      toolbarHeight: 55,
-      leadingWidth: 55,
+      centerTitle: false,
+      surfaceTintColor: context.themeColors.themeColor1,
       backgroundColor: context.themeColors.themeColor1,
+      title: Text(
+        "Bazaar",
+        style: TextStyle(
+          fontSize: Sizes.xxLargeFontSize,
+          fontFamily: 'Biro Script',
+          fontWeight: FontWeight.bold,
+        ),
+      ),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1),
-        child: Container(color: context.themeColors.themeColor8, height: 1),
-      ),
-      leading: Padding(
-        padding: const EdgeInsets.only(
-          left: Sizes.mediumPadding,
-          top: Sizes.smallPadding,
-          bottom: Sizes.smallPadding,
-        ),
-        child: CircleAvatar(
-          backgroundImage: const AssetImage('assets/images/avatar.png'),
-        ),
-      ),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          color: context.themeColors.themeColor6,
-        ),
+        child: Container(height: 1, color: context.themeColors.themeColor2),
       ),
       actions: [
-        IconButton(
-          icon: SvgPicture.asset(
-            "assets/icons/search.svg",
-            colorFilter: ColorFilter.mode(
-              context.themeColors.themeColor6,
-              BlendMode.srcIn,
-            ),
-            width: Sizes.mediumIconSize,
-            height: Sizes.mediumIconSize,
-          ),
-          onPressed: () {},
-        ),
         Padding(
-          padding: const EdgeInsets.only(
-            left: Sizes.smallPadding,
-            right: Sizes.mediumPadding,
-          ),
+          padding: EdgeInsets.only(right: Sizes.smallPadding),
           child: IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/circle-plus.svg",
-              colorFilter: ColorFilter.mode(
-                context.themeColors.themeColor6,
-                BlendMode.srcIn,
-              ),
-              width: Sizes.mediumIconSize,
-              height: Sizes.mediumIconSize,
+            icon: Icon(
+              Provider.of<ThemeProvider>(context).isDarkMode
+                  ? Icons.light_mode
+                  : Icons.dark_mode,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+            },
           ),
         ),
       ],
@@ -73,5 +45,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(55);
+  Size get preferredSize => const Size.fromHeight(60);
 }

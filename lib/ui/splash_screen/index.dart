@@ -3,15 +3,9 @@ import 'widgets/splash_screen_view.dart';
 import 'widgets/splash_screen_bottom_sheet.dart';
 import '../../common/constants/size_constants.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
+class SplashScreen extends StatelessWidget {
   final PageController controller = PageController();
+  SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

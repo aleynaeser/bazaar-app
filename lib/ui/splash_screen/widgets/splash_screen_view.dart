@@ -1,26 +1,19 @@
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
-import '../../../common/constants/size_constants.dart';
 import '../../../common/models/theme_model.dart';
-import 'splash_screen_bottom_sheet.dart';
+import '../../../common/constants/size_constants.dart';
 
-class SplashScreenView extends StatefulWidget {
+class SplashScreenView extends StatelessWidget {
   final PageController controller;
-
   const SplashScreenView({super.key, required this.controller});
 
-  @override
-  State<SplashScreenView> createState() => _SplashScreenViewState();
-}
-
-class _SplashScreenViewState extends State<SplashScreenView> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Expanded(
           child: PageView(
-            controller: widget.controller,
+            controller: controller,
             children: <Widget>[
               SplashScreenPageView(
                 animation: "assets/animations/splash_screen_1.json",
@@ -64,7 +57,7 @@ class SplashScreenPageView extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontSize: Sizes.xLargeTextSize,
+            fontSize: Sizes.xLargeFontSize,
             fontWeight: FontWeight.bold,
             color: context.themeColors.themeColor3,
           ),
@@ -77,7 +70,7 @@ class SplashScreenPageView extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               height: 1.8,
-              fontSize: Sizes.mediumTextSize,
+              fontSize: Sizes.mediumFontSize,
               color: context.themeColors.themeColor6,
             ),
           ),
