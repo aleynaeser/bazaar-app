@@ -1,16 +1,12 @@
-# bazaar_app
+## 📱 Test Video
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## ❗️Environment Setup 
 
-A few resources to get you started if this is your first Flutter project:
+Create a `.env` file in the root directory with the following variables:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```env
+API_URL="http://kasimadalan.pe.hu"
+IMAGE_URL="http://kasimadalan.pe.hu/urunler/resimler"
+```
