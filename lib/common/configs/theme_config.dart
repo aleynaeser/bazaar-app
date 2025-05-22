@@ -18,6 +18,15 @@ class ThemeConfig {
           foregroundColor: themeColors.themeColor1,
         ),
       ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          backgroundColor: themeColors.themeColor2,
+          foregroundColor: themeColors.themeColor4,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(0),
+          ),
+        ),
+      ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         elevation: 0.38,
         backgroundColor: themeColors.themeColor1,

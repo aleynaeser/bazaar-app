@@ -15,7 +15,7 @@ class ProductGrid extends StatelessWidget {
 
     switch (state.status) {
       case ProductStatus.failure:
-        return const Center(child: Text('Failed to fetch posts...'));
+        return const Center(child: Text('Failed to fetch products...'));
       case ProductStatus.initial:
         return Center(
           child: CircularProgressIndicator(
@@ -23,7 +23,6 @@ class ProductGrid extends StatelessWidget {
             padding: EdgeInsets.all(Sizes.mediumPadding),
           ),
         );
-
       case ProductStatus.success:
         return GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

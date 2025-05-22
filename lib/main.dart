@@ -1,10 +1,12 @@
 import 'ui/main_screen/index.dart';
 import 'ui/splash_screen/index.dart';
 import 'package:flutter/material.dart';
+import 'core/card/bloc/card_bloc.dart';
 import 'package:provider/provider.dart';
 import 'common/configs/theme_config.dart';
 import 'common/providers/theme_provider.dart';
 import 'common/constants/base_constants.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -15,8 +17,13 @@ void main() async {
   await dotenv.load(fileName: ".env");
 
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeProvider(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        BlocProvider(create: (_) => CardAddBloc()),
+        BlocProvider(create: (_) => CardDeleteBloc()),
+        BlocProvider(create: (_) => CardProductBloc()),
+      ],
       child: BazaarApp(showHome: showHome),
     ),
   );
